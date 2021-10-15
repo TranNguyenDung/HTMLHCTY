@@ -11,10 +11,12 @@ body{
 .calculator{
     width: 400px;
     height: 600px;
-    background-color: #2f312f;
+    background-color: #000000;
 }
 
 .result{
+    text-align: right;
+    height: 350px;
     width: 100%;
 }
 
@@ -23,37 +25,54 @@ body{
 }
 
 .line{
+    height: 50px;
     width: 100%;
     float: left;
 }
 
 .buttom{
-    padding: 1px;
-    color: #FFFFFF;
+    align-content: center;
+    text-align: center;
+    color: #ffffff;
     width: 25%;
     aspect-ratio: 2/1;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.07);
     text-align: center;
     float: left;
     box-sizing: border-box;
+    position: relative;
+    border: #000000 solid 2px;
 }
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 
 .buttom.buttom2{
     background-color: rgba(255, 255, 255, 0.3);
 }
 
 .buttom3{
-    padding: 1px;
-    color: #FFFFFF;
     width: 12.5%;
     aspect-ratio: 1/1;
-    background-color: rgba(255, 255, 255, 0.1);
-    text-align: center;
-    float: left;
-    box-sizing: border-box;
 }
 
+.buttom4{
+    background-color:#FB650F;
+}
 
+.buttom5{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.buttom6{
+    background-color: rgba(255, 255, 255, 0.3);
+}
 
 
 
