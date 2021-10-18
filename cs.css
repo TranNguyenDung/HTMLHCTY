@@ -4,166 +4,42 @@
 .block
 */
 body{
-    background-color: #FFFFFF;
     margin: 0;
 }
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
 
 .calculator{
     width: 400px;
     height: 600px;
-    background-color: #000000;
+    background-color: #141313;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .result{
-    text-align: right;
-    height: 350px;
+    background-color: #000000;
     width: 100%;
 }
 
 .keyboard{
     width: 100%;
-}
-
-.line{
-    height: 50px;
-    width: 100%;
-    float: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
 }
 
 .buttom{
-    align-content: center;
-    text-align: center;
-    color: #ffffff;
-    width: 25%;
     aspect-ratio: 2/1;
-    background-color: rgba(255, 255, 255, 0.07);
     text-align: center;
-    float: left;
-    box-sizing: border-box;
-    position: relative;
-    border: #000000 solid 2px;
-}
-
-.center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-
-.buttom.buttom2{
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.buttom3{
-    width: 12.5%;
-    aspect-ratio: 1/1;
-}
-
-.buttom4{
-    background-color:#FB650F;
-}
-
-.buttom5{
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.buttom6{
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-
-
-
-
-
-
-
-#Tab1{
-    background-color: black;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-#PT,#CONG{
-    width: 20px;
-}
-td{
-    background-color: #303130;
-    width: 40px;
-    height: 20px;
-    border: #2f312f solid 2px;
-}
-
-#idBang{
-    background-color:#f3bb04;
-    border: #f3bb04 solid 2px;
-}
-
-#AC, #PT, #CONG{
-    background-color:#524d3e;
-}
-
-#CH, #NH, #TR, #CO{
-    background-color:#6b675a;
-}
-
-
-
-.textStyle {
-    width: 700px;
-    height: 100px;
-    font-size: 3em;
-    background-color: #bbff00;
-    color: #2c0fd3;
-    /*padding: 50px 30px;
-    */
-    padding: 10px;
-    margin: 10px 20px 30px 50px;
-    box-sizing: border-box;
-    /*border: 2px solid #00FF00;
-    */border-bottom: 4px solid #FF00FF;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-}
-.textStyle1 {
-    background-color: #FF6600;
-}
-
-
-.div1 {
-    background-color: aqua;
-    color: red;
-    font-size: 50px;
-}
-
-.block {
-    width: 300px;
-    height: 150px;
-    background-color: aqua;
-    
-    /* color:rgba(255, 128, 100, 0.5); */
-    color: #FF7799;
-    font-size: 50px;
-    float: left;
-    padding: 10px;
-    margin: 2px;
-    text-align:center;
-    
-}
-#btnCal{
-    color: blue;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    border-color:darkgray;
-    background: linear-gradient(#77ff99,darkgray);
-}
-#cart{
-    background-color: blue;
+    color: #FFF;
+    background-color: #F00;
+    gap: 5px;
 }
