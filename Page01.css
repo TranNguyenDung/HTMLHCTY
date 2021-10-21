@@ -79,6 +79,7 @@ body {
     background-color: #d9dfdc8f;
     width: 250px;
     min-width: 250px;
+    max-width: 250px;
     /* height: 100%; */
     flex: auto;
     border-right: #756c6c 1px solid;
@@ -141,45 +142,7 @@ body {
     -moz-text-decoration-line: none;
 }
 
-
-
-
-
 /*  */
-
-.content .ClassContent {
-    /* background-color: #756c6c; */
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-
-.ClassTabContent {
-    /* .ClassContent */
-    border-bottom: 1px solid #757272;
-    /* border-top: 1px solid #757272; */
-    /* background-color: #c4bdbd; */
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    /* margin-left: 40px; */
-}
-
-.ClassLinkMenu {
-    /*  */
-    margin-left: 40px;
-    /* background-color: #d3b718; */
-    height: 50px;
-    /* width: 100%; */
-    display: inline-flex;
-    align-items: flex-start;
-    justify-content: start;
-    padding: 10px;
-}
-
 .ClassLink1,
 .ClassLink2 {
     display: block;
@@ -189,7 +152,6 @@ body {
     box-sizing: border-box;
     padding-left: 5px;
     padding-right: 5px;
-
 }
 
 .ClassLink1:hover{
@@ -222,16 +184,144 @@ body {
     box-sizing: border-box;
 }
 
-.ClassContent .ClassListContent {
+.ClassContent {
     border: 1px solid #998d8d;
     box-sizing: border-box;
     /* background-color: #0c4ad18f; */
-    height: calc(100% - 100px - 40px);
-    width: calc(100% - 40px);
+    /* height: calc(100% - 100px - 40px); */
+    /* width: calc(100% - 40px); */
     margin: 40px;
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
+    flex: auto;
+    min-height: 1000px;
+    /* width: 100%; */
+    /* height: 100%; */
+    flex-direction: row;
+    box-sizing: border-box;
+    /* min-width: 200px; */
+    
+
+}
+
+
+.ClassContent1,.ClassContent2{
+    /* max-width: 400px; */
+    /* min-width: 400px; */
+    display:flex;
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    /* border: rgb(240, 236, 7) 1px solid; */
+    border: rgb(158, 240, 7) 1px solid;
+    padding:5px;
+    margin:5px;
+    /* box-shadow: #CCCCCC 5px 5px 5px 5px;  */
+}
+
+.InforBienDong{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.Note1{
+    width: 40px;
+    height: 20px;
+    background-color: red;
+}
+.Note2{
+    width: 40px;
+    height: 20px;
+    background-color: green;
+}
+.Note3{
+    width: 40px;
+    height: 20px;
+    background-color: blue;
+}
+.Note4{
+    width: 40px;
+    height: 20px;
+    background-color: orange;
+}
+
+.NoteInfo{
+    display: flex;
+
+}
+.NoteName{
+    margin-left: 5px;
+}
+
+#mapid { height: 180px; }
+
+.ClassContent1:hover{
+    border: rgb(35, 138, 235) 1px solid;
+}
+
+.clasIconColor{
+    background-color: red;
+}
+
+.ClassOtpCotent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: center;
+    flex-direction: row;
+}
+
+.txtTim, .txtSee{
+    font-size: 1rem;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.classImageIcon{
+    width: 32px;
+    height: 32px;
+    
+}
+
+span{
+    padding: 10px;
+    min-width: 200px;
+}
+
+.classImageResize{
+    width: 50%;
+    background-image: url('https://picsum.photos/id/0/367/267');
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1;
+}
+
+.myimg{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.ClassFormatText{
+    font-size: 1.5rem;
+}
+
+.classImageRadius{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .ClassMakeNew {
@@ -345,32 +435,6 @@ body {
     box-sizing: border-box;
 }
 
-.classContent {
-    /* height: 50px; */
-    width: 100%;
-    /* background-color: #4ec24e; */
-    display: flex;
-    border-bottom: 1px solid #dfdfe7;
-    box-sizing: border-box;
-}
-
-.classContent ul {
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 6fr 2fr 1fr 3.5fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.classContent ul li {
-    padding: 0%;
-    margin: 0%;
-    list-style: none;
-    /* background-color: rgb(192, 185, 185); */
-}
-
 .ButtonEdit {
     display: flex;
     justify-content: flex-end;
@@ -479,6 +543,10 @@ body {
 }
 
 
+/* myChart */
+#mapid { height: 300px;
+width: 300px; }
+
 /* Footer------------------------------------------------ */
 
 .footer {
@@ -499,3 +567,16 @@ body {
     font-size: 1rem;
     flex-direction: column;
 }
+/* 
+@media screen and (max-width:850px)
+{
+    .ClassContent1{
+        flex-direction: column;
+    }
+    .classImageResize{
+        width: 30%;
+        height: calc(30% * 9 / 16);
+        min-width: 30%;
+        min-height: calc(30% * 9 / 16);
+    }
+} */

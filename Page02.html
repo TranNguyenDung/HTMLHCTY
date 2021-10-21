@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Page02.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <!-- Maps Start -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!-- Maps End -->
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="headerContent" href="https://www.alinco.vn/">
+            <div class="ClassIcon"><img class="imageIcon" src="https://www.alinco.vn/wp-content/uploads/2018/09/cropped-logo-1-192x192.png" ></div>
+            <div class="ClassLogo">
+                <div class="Alinco">
+                    ALINCO
+                </div>
+                <div class="Electronic">
+                    Electronic
+                </div>
+            </div>
+        </a> 
+    </div>
+
+    <div class="content">
+        <div class="ClassMenu">
+            <!--  -->
+            <div class="ClassMenuItemGroup">
+                <a class="ClassMenuName" href="https://www.alinco.vn/">
+                    <img  class="ClassMenuIcon" src="/cauldron.png">
+                    <div>Dashboard</div>
+                </a>
+            </div>
+            <!--  -->
+            <div class="ClassMenuItemGroup">
+                <a class="ClassMenuName" href="https://www.alinco.vn/">
+                    <img  class="ClassMenuIcon" src="/fortune-teller (2).png">
+                    <div>Bài viết</div>
+                </a>
+                <a class="ClassMenuName" href="https://www.alinco.vn/"> 
+                    <img  class="ClassMenuIcon" src="">
+                    <div>Bài viết</div>
+                </a>
+                <a class="ClassMenuName" href="https://www.alinco.vn/"> 
+                    <img  class="ClassMenuIcon" src="">
+                    <div>Chủ đề bài viết</div>
+                </a>
+            </div>
+            <!--  -->
+            <div class="ClassMenuItemGroup">
+                <a class="ClassMenuName" href="https://www.alinco.vn/"> 
+                    <img  class="ClassMenuIcon" src="/fortune-teller.png">
+                    <div>Sản phầm</div>
+                </a>
+                <a class="ClassMenuName" href="https://www.alinco.vn/"> 
+                    <img  class="ClassMenuIcon" src="">
+                    <div>Sản phầm</div>
+                </a>
+                <a class="ClassMenuName" href="https://www.alinco.vn/"> 
+                    <img  class="ClassMenuIcon" src="">
+                    <div>Danh mục sản phẩm</div>
+                </a>
+            </div>
+            <!--  -->
+            <div class="ClassMenuItemGroup">
+                <a class="ClassMenuName" href="https://www.alinco.vn/"> 
+                    <img  class="ClassMenuIcon" src="/fortune-teller (1).png">
+                    <div>Banner</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="ClassContent">
+            <div class="ClassContent1">
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                <div class="InforBienDong">
+                    <div class="NoteInfo">
+                        <div class="Note1"></div>
+                        <div class="NoteName">Thế Giới</div>
+                    </div>
+                    <div class="NoteInfo">
+                        <div class="Note2"></div>
+                        <div class="NoteName">Việt Nam</div>
+                    </div>
+                    <div class="NoteInfo">
+                        <div class="Note3"></div>
+                        <div class="NoteName">Trung Quốc</div>
+                    </div>
+                    <div class="NoteInfo">
+                        <div class="Note4"></div>
+                        <div class="NoteName">Mỹ</div>
+                    </div>
+                    <div> Tình hình căng thẳng Biễn Đông(TG):<span id="classCangThang">0%</span></div>
+                    <div> Tình hình căng thẳng Biễn Đông(VN):<span id="classCangThangVN">0%</span></div>
+                    <div> Tình hình căng thẳng Biễn Đông(CN):<span id="classCangThangTQ">0%</span></div>
+                    <div> Tình hình căng thẳng Biễn Đông(US):<span id="classCangThangM">0%</span></div>
+
+                    <div>(TG):<span id="classExport">0%</span></div>
+                    <div>(VN):<span id="classExportVN">0%</span></div>
+                    <div>(CN):<span id="classExportTQ">0%</span></div>
+                    <div>(US):<span id="classExportM">0%</span></div>
+                </div>
+            </div>
+            <div class="ClassContent1">
+                <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+            </div>
+            <div class="ClassContent2">
+                <div id="mapid" style="width: 100%; height: 400px;"></div>              
+            </div>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/sk9wLU80F5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerCenter">
+            <div class="NameCTY">Alinco Electronics Việt Nam</div>
+            <div class="Copyright">Copyright © 2016 - 2021</div>            
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="classOption">
+        <div class="classOption1">
+            <img class="ImageOption" src="/globalization.png">
+        </div>
+        <div class="classOption2">
+            <img class="ImageOption" src="/working-hours.png">
+        </div>
+    </div>
+
+    <div class="classDev">
+        DEVELOPMENT
+    </div>
+
+
+    <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
+    <script src="/node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="/js/Page02.js"></script>
+</body>
+
+</html>
