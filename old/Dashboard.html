@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="Dashboard.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+		<!-- Maps Start -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin=""
+		/>
+		<script
+			src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""
+		></script>
+		<!-- Maps End -->
+	</head>
+
+	<body>
+		<div class="header">
+			<a class="headerContent" href="https://www.alinco.vn/">
+				<div class="ClassIcon">
+					<img
+						class="imageIcon"
+						src="https://www.alinco.vn/wp-content/uploads/2018/09/cropped-logo-1-192x192.png"
+					/>
+				</div>
+				<div class="ClassLogo">
+					<div class="Alinco">ALINCO</div>
+					<div class="Electronic">Electronic</div>
+				</div>
+			</a>
+		</div>
+
+		<div class="content">
+			<div class="ClassMenu">
+				<!--  -->
+				<div class="ClassMenuItemGroup">
+					<a class="ClassMenuName" href="https://www.alinco.vn/">
+						<img class="ClassMenuIcon" src="/cauldron.png" />
+						<div>Dashboard</div>
+					</a>
+				</div>
+				<!--  -->
+				<div class="ClassMenuItemGroup">
+					<a class="ClassMenuName" href="https://www.alinco.vn/">
+						<img class="ClassMenuIcon" src="/fortune-teller (2).png" />
+						<div>Bài viết</div>
+					</a>
+					<a class="ClassMenuName" href="https://www.alinco.vn/">
+						<img class="ClassMenuIcon" src="" />
+						<div>Bài viết</div>
+					</a>
+					<a class="ClassMenuName" href="https://www.alinco.vn/">
+						<img class="ClassMenuIcon" src="" />
+						<div>Chủ đề bài viết</div>
+					</a>
+				</div>
+				<!--  -->
+				<div class="ClassMenuItemGroup">
+					<a class="ClassMenuName" href="https://www.alinco.vn/">
+						<img class="ClassMenuIcon" src="/fortune-teller.png" />
+						<div>Sản phầm</div>
+					</a>
+					<a class="ClassMenuName" href="https://www.alinco.vn/">
+						<img class="ClassMenuIcon" src="" />
+						<div>Sản phầm</div>
+					</a>
+					<a class="ClassMenuName" href="./Page01.html">
+						<img class="ClassMenuIcon" src="" />
+						<div>Danh mục sản phẩm</div>
+					</a>
+				</div>
+				<!--  -->
+				<div class="ClassMenuItemGroup">
+					<a class="ClassMenuName" href="./Page02.html">
+						<img class="ClassMenuIcon" src="/fortune-teller (1).png" />
+						<div>Banner</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="ClassContent">
+				<div class="ClassContent1">
+					<!--  -->
+					<form name="formRegister">
+						<div class="classInfoHinh">
+							<div class="classInfo">
+								<div class="formHori">
+									<div for="fname">Họ Tên:</div>
+									<div>
+										<input
+											type="text"
+											for="fname"
+											name="fname"
+											class="infoInput"
+											value=""
+											id="idName"
+										/>
+									</div>
+								</div>
+								<div class="formHori">
+									<div for="fbriday">Năm Sinh:</div>
+									<div>
+										<input type="text" name="fbriday" value="" class="infoInput" id="idBriday" />
+									</div>
+								</div>
+								<div class="formHori">
+									<div for="fHinh">Hình Đại Diện:</div>
+									<div>
+										<input
+											type="text"
+											name="fHinhDaiDien"
+											value=""
+											class="infoInput"
+											id="fHinhDaiDien"
+										/>
+									</div>
+								</div>
+								<div class="formHori">
+									<div for="fGioiTinh">Giới Tính:</div>
+									<div>
+										<input
+											type="radio"
+											id="fgioitinh"
+											name="fgioitinh"
+											checked="true"
+											value="Nam"
+										/>
+										Nam
+									</div>
+									<div><input type="radio" id="fgioitinh" name="fgioitinh" value="Nữ" /> Nữ</div>
+								</div>
+							</div>
+
+							<!-- <div class="classHinh">
+                            <img src="https://i.pinimg.com/564x/21/1c/63/211c636a2ac3a13599fae6077da0d17a.jpg" width="100%">
+                        </div> -->
+						</div>
+
+						<textarea class="classInfoTextarea" id="idInfoTextarea"></textarea>
+						<!-- <button  type="button" class="fbutton" onclick="AddInfo()">Click me</button> -->
+						<button type="button" class="fbutton">Click me</button>
+						<button type="button" class="fbutton">Click me 2</button>
+					</form>
+					<!--  -->
+				</div>
+				<div class="ClassContent1">
+					<div class="InfoBox">
+						<div class="InfoBasic">
+							<div class="InfoBasicHeader">Thông tin người dùng</div>
+							<div class="InfoBasicName">Họ Tên: Trần Nguyên Dũng</div>
+							<div class="InfoBasicNam">Sinh Năm: 1993</div>
+							<div class="InfoBasicGioiTinh">Giới Tính: Nam</div>
+						</div>
+						<div class="InfoImage">
+							<img
+								src="https://i.pinimg.com/564x/21/1c/63/211c636a2ac3a13599fae6077da0d17a.jpg"
+								width="100%"
+							/>
+						</div>
+						<div class="InfoNote">
+							Mô tả: ---Sở thích: hay uống nước, thở, đi đái các kiểu...<br />
+							---Sở gét: hay uống nước, thở, đi đái các kiểu...<br />
+							---
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footerCenter">
+				<div class="NameCTY">Alinco Electronics Việt Nam</div>
+				<div class="Copyright">Copyright © 2016 - 2021</div>
+			</div>
+		</div>
+
+		<!--  -->
+		<div class="classOption">
+			<div class="classOption1">
+				<img class="ImageOption" src="./globalization.png" />
+			</div>
+			<div class="classOption2">
+				<img class="ImageOption" src="./working-hours.png" />
+			</div>
+		</div>
+
+		<div class="classDev">DEVELOPMENT</div>
+		<script src="/js/dashboard.js"></script>
+	</body>
+</html>

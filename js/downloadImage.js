@@ -1,10 +1,11 @@
-const http = require('https'); // or 'https' for https:// URLs
+const http = require('http'); // or 'https' for https:// URLs
+const https = require('https'); // or 'https' for https:// URLs
 const fs = require('fs');
 const {URL} = require('url');
 const path = require("path");
 
 const file = fs.createWriteStream("file.jpg");
-const request = http.get("https://www.alinco.vn/wp-content/uploads/2013/06/DR-138HT-HE-DR-438HE.png", 
+const request = https.get("https://www.alinco.vn/wp-content/uploads/2013/06/DR-138HT-HE-DR-438HE.png", 
     function(response) {
         response.pipe(file);
     }
@@ -35,16 +36,18 @@ function downLoadFile(fileUrl){
 async function main(){
     console.log("Start");
     try{
-        const code = await downLoadFile("https://www.alinco.vn/wp-content/uploads/2013/06/DR-138HT-HE-DR-438HE.png");
-        console.log(code);
+        //const code = await downLoadFile("http://pngimg.com/uploads/autumn_leaves/autumn_leaves_PNG3601.png");
+        //console.log(code);
     }
     catch(err){
         console.log(err);
     }
     
     try{
-        await downLoadFile("https://i.pinimg.com/564x/d2/35/2b/d2352b3547cdfe8dd91283387bde8dfc.jpg");
-        await downLoadFile("https://i.pinimg.com/564x/98/2c/75/982c75580735f73b5344cfaa0221c08d.jpg");
+        await downLoadFile("http://pngimg.com/uploads/bamboo/bamboo_PNG2.png");
+        await downLoadFile("http://pngimg.com/uploads/cotton/cotton_PNG23.png");
+        await downLoadFile("http://pngimg.com/uploads/cotton/cotton_PNG16.png");
+        await downLoadFile("http://pngimg.com/uploads/fir_tree/fir_tree_PNG3693.png");
     }
     catch(err){
         console.log(err);

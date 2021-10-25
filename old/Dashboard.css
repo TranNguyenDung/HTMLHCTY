@@ -1,0 +1,682 @@
+body {
+	margin: 0;
+}
+/* Header------------------------------------------------ */
+
+.header {
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	display: flex;
+	justify-content: flex-start;
+	border: 1px solid #756c6c;
+}
+
+.header .headerContent {
+	/* width: 100%; */
+	height: 60px;
+	background-color: #fff;
+	display: flex;
+	justify-content: flex-start;
+	text-decoration-line: none;
+	-moz-text-decoration-line: none;
+	/* background-color: #230de7; */
+	position: relative;
+	left: 100px;
+}
+
+.imageIcon {
+	width: 60px;
+}
+
+.headerContent .ClassIcon {
+	/* background-color: rgb(255, 255, 255); */
+	/* padding-left: 70px; */
+}
+
+.headerContent .ClassLogo {
+	/* background-color: #FF0; */
+	width: 100px;
+	/* justify-content: center; */
+	text-align: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.ClassLogo .Alinco {
+	width: 100%;
+	font-size: 1.5rem;
+	font-weight: bold;
+	/* background-color: rgb(39, 204, 135); */
+}
+
+.ClassLogo .Electronic {
+	width: 100%;
+	font-size: 1.4rem;
+	/* background-color: rgb(62, 34, 224); */
+}
+
+.Alinco:hover,
+.Electronic:hover {
+	font-size: 1.6rem;
+}
+
+/* Content------------------------------------------------ */
+
+.content {
+	width: 100%;
+	/* height: 800px; */
+	flex: auto;
+	/* background-color: rgb(243, 243, 243); */
+	display: flex;
+	justify-content: left;
+}
+
+.content .ClassMenu {
+	background-color: #d9dfdc8f;
+	width: 250px;
+	min-width: 250px;
+	max-width: 250px;
+	/* height: 100%; */
+	flex: auto;
+	border-right: #756c6c 1px solid;
+}
+
+.ClassMenu .ClassMenuItemGroup {
+	/* border: 1px solid #3b3737; */
+	border-bottom: #b1aaaa 1px solid;
+	/* border-left: #756c6c 1px solid; */
+	/* border-right: #756c6c 1px solid; */
+}
+
+.ClassMenuName:hover {
+	background-color: rgba(0, 255, 0, 0.2);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.ClassMenuItemGroup:hover {
+	border-right: #3a08f0 5px solid;
+	background-color: rgba(0, 255, 0, 0.1);
+}
+
+.ClassMenuItemGroup .ClassMenuItem {
+	padding: 0;
+	width: 100%;
+	height: 60px;
+	/* background-color: #b1d3c58f; */
+	text-align: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	box-sizing: border-box;
+}
+
+.ClassMenuIcon {
+	padding: 10px;
+	width: 30px;
+	/* background-color: #3a08f0; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ClassMenuName {
+	width: 100%;
+	height: 50px;
+	padding: 0px;
+	font-size: 1.2rem;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	padding-left: 5px;
+	box-sizing: border-box;
+	text-decoration-line: none;
+	-moz-text-decoration-line: none;
+}
+
+/*  */
+.ClassLink1,
+.ClassLink2 {
+	display: block;
+	background-color: #eeeee4;
+	/* padding: 5px; */
+	/* margin: 5px; */
+	box-sizing: border-box;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.ClassLink1:hover {
+	text-decoration-line: underline;
+	-moz-text-decoration-line: underline;
+}
+
+.ClassTabName {
+	/* background-color: #dbe91b8f; */
+	height: 100px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 40px;
+}
+
+.ClassTabName1 {
+	/* background-color: #1b29e98f; */
+	padding: 20px;
+}
+
+.ClassTabName2 {
+	/* background-color: #f026698f; */
+	padding: 20px;
+}
+.ClassTabName1:hover,
+.ClassTabName2:hover {
+	border-bottom: #230de7 2px solid;
+	background-color: rgba(0, 0, 255, 0.1);
+	box-sizing: border-box;
+}
+
+.ClassContent {
+	border: 1px solid #998d8d;
+	box-sizing: border-box;
+	/* background-color: #0c4ad18f; */
+	/* height: calc(100% - 100px - 40px); */
+	/* width: calc(100% - 40px); */
+	margin: 40px;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex: auto;
+	min-height: 1000px;
+	/* width: 100%; */
+	/* height: 100%; */
+	flex-direction: row;
+	box-sizing: border-box;
+	/* min-width: 200px; */
+}
+
+.ClassContent1,
+.ClassContent2 {
+	/* max-width: 400px; */
+	/* min-width: 400px; */
+	display: flex;
+	text-decoration-line: none;
+	-moz-text-decoration-line: none;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	/* border: rgb(240, 236, 7) 1px solid; */
+	border: rgb(158, 240, 7) 1px solid;
+	padding: 5px;
+	margin: 5px;
+	/* box-shadow: #CCCCCC 5px 5px 5px 5px;  */
+}
+
+.InforBienDong {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.2rem;
+}
+
+.Note1 {
+	width: 40px;
+	height: 20px;
+	background-color: red;
+}
+.Note2 {
+	width: 40px;
+	height: 20px;
+	background-color: green;
+}
+.Note3 {
+	width: 40px;
+	height: 20px;
+	background-color: blue;
+}
+.Note4 {
+	width: 40px;
+	height: 20px;
+	background-color: orange;
+}
+
+.NoteInfo {
+	display: flex;
+}
+.NoteName {
+	margin-left: 5px;
+}
+
+#mapid {
+	height: 180px;
+}
+
+.ClassContent1:hover {
+	border: rgb(35, 138, 235) 1px solid;
+}
+
+.clasIconColor {
+	background-color: red;
+}
+
+.ClassOtpCotent {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	align-content: center;
+	flex-direction: row;
+}
+
+.txtTim,
+.txtSee {
+	font-size: 1rem;
+	padding-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.classImageIcon {
+	width: 32px;
+	height: 32px;
+}
+
+span {
+	padding: 10px;
+	min-width: 200px;
+}
+
+.classImageResize {
+	width: 50%;
+	background-image: url('https://picsum.photos/id/0/367/267');
+	background-size: cover;
+	background-position: center;
+	aspect-ratio: 1/1;
+}
+
+.myimg {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.ClassFormatText {
+	font-size: 1.5rem;
+}
+
+.classImageRadius {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.ClassMakeNew {
+	display: flex;
+	justify-content: flex-end;
+	/* background-color: #4ec24e; */
+	color: #fff;
+	width: 100%;
+	height: 90px;
+}
+
+.MakeNewContent {
+	justify-content: center;
+	align-items: center;
+	background-color: #4a39e2;
+	font-weight: 800;
+	border-radius: 10px;
+	display: flex;
+	color: #fff;
+	width: 150px;
+	height: 40px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	margin-top: 40px;
+	margin-right: 10px;
+}
+
+.ClassSetPage {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	height: 90px;
+	/* background-color: #5d5696; */
+	align-items: center;
+	padding-right: 10px;
+	box-sizing: border-box;
+}
+
+.ClassBefore,
+.ClassAfter {
+	font-weight: 800;
+	width: 100px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #d3d3d8;
+	color: rgb(87, 87, 87);
+	border: 1px solid rgb(116, 116, 116);
+	box-sizing: border-box;
+}
+.ClassBefore:hover,
+.ClassAfter:hover {
+	font-size: 1.2rem;
+}
+
+.ClassPageNo {
+	font-weight: 800;
+	width: 50px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #4a39e2;
+	color: #fff;
+	/* border: 1px solid #2b246d; */
+	box-sizing: border-box;
+}
+
+.MakeNewContent:hover,
+.ClassLuuTru:hover,
+.ClassCapNhat:hover {
+	background-color: #d4c21d;
+	font-size: 1.1rem;
+}
+
+.classListHeader {
+	height: 50px;
+	width: 100%;
+	/* background-color: #4ec24e; */
+	display: flex;
+	border-top: 1px solid #a9a9ac;
+	border-bottom: 1px solid #a9a9ac;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+.classListHeader ul {
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 1fr 6fr 2fr 1fr 3.5fr;
+	gap: 40px;
+	align-items: center;
+}
+
+.classListHeader ul li {
+	padding: 0%;
+	margin: 0%;
+	list-style: none;
+	/* background-color: rgb(192, 185, 185); */
+}
+
+.classListHeader1 {
+	/* height: 50px; */
+	width: 100%;
+	/* background-color: #4ec24e; */
+	display: flex;
+	/* border-bottom: 1px solid #a9a9ac; */
+	box-sizing: border-box;
+}
+
+.ButtonEdit {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.ClassLuuTru,
+.ClassCapNhat {
+	font-weight: 800;
+	color: #fff;
+	width: 100px;
+	height: 40px;
+	background-color: #4a39e2;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2px;
+	box-sizing: border-box;
+}
+
+.ButtonEditTmp {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.ClassLuuTruTmp,
+.ClassCapNhatTmp {
+	font-weight: 800;
+	color: #fff;
+	width: 100px;
+	height: 20px;
+	/* background-color: #230de7; */
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2px;
+	box-sizing: border-box;
+}
+
+.classOption {
+	color: #fff;
+	height: 40px;
+	/* width: 40px; */
+	/* width: 150px; */
+	position: fixed;
+	bottom: 100px;
+	right: 0px;
+	/* text-align: center; */
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+
+.classOption1,
+.classOption2 {
+	padding: 0px;
+	margin: 0px;
+}
+
+.ImageOption {
+	background-color: #b9d327;
+	padding: 0;
+	margin: 0;
+	width: 50px;
+	display: flex;
+	align-content: flex-end;
+	justify-content: flex-end;
+	align-items: flex-end;
+	border: 1px solid #230de7;
+	box-shadow: #756c6c;
+}
+.ImageOption:hover {
+	width: 70px;
+}
+
+.classDev {
+	display: flex;
+	background-color: red;
+	color: #fff;
+	height: 40px;
+	width: 150px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	/* position: fixed; */
+	font-weight: bold;
+}
+
+.ClassTieuDe {
+	color: #230de7;
+}
+
+/* myChart */
+#mapid {
+	height: 300px;
+	width: 300px;
+}
+
+.classInfo {
+	/* background-color: #1ec9bd; */
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.classInfoHinh {
+	/* background-color: #d8e70d; */
+	display: flex;
+	flex-direction: row;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.classHinh {
+	margin: 0;
+	padding: 0;
+	width: 130px;
+}
+
+.infoInput {
+	width: 300px;
+}
+
+.formHori {
+	width: calc(100% - 20px);
+	/* background-color: #d4c21d; */
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+	margin: 5px;
+	padding: 2px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.classInfoMore {
+	/* background-color: #a2d642; */
+	width: 450px;
+	height: 100px;
+}
+
+.classInfoTextarea {
+	/* background-color: #a2d642; */
+	width: 450px;
+	height: 100px;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.fbutton {
+	width: 457px;
+	height: 50px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+.InfoBox {
+	display: grid;
+	grid-template-columns: 2fr 1fr 3.5fr;
+}
+
+.InfoBasic {
+	height: 100px;
+	width: 400px;
+	border: #4a39e2 solid 1px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: space-between;
+}
+
+.InfoBasicName {
+}
+
+.InfoBasicNam {
+}
+
+.InfoImage {
+	margin: 10px;
+	box-sizing: border-box;
+}
+
+.InfoBasicGioiTinh {
+}
+
+.InfoNote {
+	font-size: 1.2rem;
+}
+
+/* Footer------------------------------------------------ */
+
+.footer {
+	width: 100%;
+	height: 50px;
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+}
+
+.footerCenter {
+	color: white;
+	width: 1200px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	flex-direction: column;
+}
+/* 
+@media screen and (max-width:850px)
+{
+    .ClassContent1{
+        flex-direction: column;
+    }
+    .classImageResize{
+        width: 30%;
+        height: calc(30% * 9 / 16);
+        min-width: 30%;
+        min-height: calc(30% * 9 / 16);
+    }
+} */

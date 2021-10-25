@@ -1,235 +1,320 @@
+var pepole = {
+	table: [],
+};
+function AddInfo() {
+	console.log('data');
+	let strName = document.getElementById('idName').value;
+	let strBriday = document.getElementById('idBriday').value;
+	let strgioitinh = document.getElementById('fgioitinh').value;
+	let strHinhDaiDien = document.getElementById('fHinhDaiDien').value;
+	let idInfoTextarea = document.getElementById('idInfoTextarea').value;
+
+	// Check full thông tin
+	if (strName == '' || strBriday == '' || strgioitinh == '') {
+		if (strName == '') {
+			alert('Ô thông tin Tên bị trống');
+			return;
+		}
+		if (strBriday == '') {
+			alert('Ô Ngày sinh bị trống');
+			return;
+		}
+		if (strgioitinh == '') {
+			alert('Ô giới tính bị trống');
+			return;
+		}
+		return;
+	}
+	// Check trùng thông tin
+	for (var i = 0; i < pepole.table.length; i++) {
+		if (pepole.table[i].name == strName) {
+			alert('Tên này đã được sử dụng');
+			return;
+		}
+	}
+
+	//const fs = require('fs');
+	//const file = fs.createWriteStream("data.json");
+	//if(fs.existsSync("data.json") == true){
+	//}
+
+	let obj = {
+		name: strName,
+		fbriday: strBriday,
+		fgioitinh: strgioitinh,
+		fHinhDaiDien: strHinhDaiDien,
+		idInfoTextarea: idInfoTextarea,
+	};
+	pepole.table.push(obj);
+	console.log(pepole);
+
+	for (var i = 0; i < pepole.table.length; i++) {
+		if (pepole.table[i].name == strName) {
+			alert('Tên này đã được sử dụng');
+			return;
+		}
+	}
+}
 
 // -----------------------------------
-var listPolyline = [[0,0]];
+var listPolyline = [[0, 0]];
 let x1 = 0.0;
 let y1 = 0.0;
 var mymap = L.map('mapid').setView([51.505, -0.09], 12);
 //L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    // maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    //id: 'mapbox/streets-v11',//Đường / Thành Phố
-    id: 'mapbox/satellite-v9',//Sông Ngòi / Đất Đá
-    // tileSize: 512,
-    // zoomOffset: -1
-    // zoomOffset: 0,
-}).addTo(mymap);
+L.tileLayer(
+	'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+	{
+		//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		// maxZoom: 18,
+		attribution:
+			'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		//id: 'mapbox/streets-v11',//Đường / Thành Phố
+		id: 'mapbox/satellite-v9', //Sông Ngòi / Đất Đá
+		// tileSize: 512,
+		// zoomOffset: -1
+		// zoomOffset: 0,
+	}
+).addTo(mymap);
 
 var LeafIcon = L.Icon.extend({
-    options: {
-        shadowUrl: 'leaf-shadow.png',
-        iconSize:     [38, 95],
-        shadowSize:   [50, 64],
-        iconAnchor:   [22, 94],
-        shadowAnchor: [4, 62],
-        popupAnchor:  [-3, -76]
-    }
+	options: {
+		shadowUrl: 'leaf-shadow.png',
+		iconSize: [38, 95],
+		shadowSize: [50, 64],
+		iconAnchor: [22, 94],
+		shadowAnchor: [4, 62],
+		popupAnchor: [-3, -76],
+	},
 });
 // -----------------------------------
-L.marker([51.5, -0.09]).addTo(mymap).bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+L.marker([51.5, -0.09]).addTo(mymap).bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
 // -----------------------------------
 L.circle([51.508, -0.11], 500, {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5
-}).addTo(mymap).bindPopup("I am a circle.");
+	color: 'red',
+	fillColor: '#f03',
+	fillOpacity: 0.5,
+})
+	.addTo(mymap)
+	.bindPopup('I am a circle.');
 // -----------------------------------
 L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]).addTo(mymap).bindPopup("I am a polygon.");
-
+	[51.509, -0.08],
+	[51.503, -0.06],
+	[51.51, -0.047],
+])
+	.addTo(mymap)
+	.bindPopup('I am a polygon.');
 
 // -----------------------------------
-var polyline = L.polyline([
-    [0,5],
-    [5,5],
-    [10,5],
-    [10,10],
-  ], {
-    color: 'red'
-  }).bindPopup('I\'m a red polyline').addTo(mymap);
+var polyline = L.polyline(
+	[
+		[0, 5],
+		[5, 5],
+		[10, 5],
+		[10, 10],
+	],
+	{
+		color: 'red',
+	}
+)
+	.bindPopup("I'm a red polyline")
+	.addTo(mymap);
 
+functionRunning3();
+function functionRunning3() {
+	setTimeout(function () {
+		functionRunning3();
+	}, 1000);
 
-  functionRunning3();
-  function functionRunning3(){
-    setTimeout(function(){functionRunning3()}, 1000);
+	let xc = ((Math.random() * 2 > 1 ? 1 : -1) * Math.random() * 108) % 108;
+	let yc = ((Math.random() * 2 > 1 ? 1 : -1) * Math.random() * 108) % 108;
 
-    let xc = ((Math.random() * 2 > 1 ? 1:-1) * Math.random() * 108) % 108;;
-    let yc = ((Math.random() * 2  > 1 ? 1:-1) * Math.random() * 108) % 108;;
+	L.circle([xc, yc], Math.random() * 590000, {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5,
+	})
+		.addTo(mymap)
+		.bindPopup('Vùng Đặc Biệt');
 
-    L.circle([xc, yc],Math.random()* 590000, {
-        color: 'red',
-        fillColor: '#f03',
-        fillOpacity: 0.5
-    }).addTo(mymap).bindPopup("Vùng Đặc Biệt");
+	x1 = (x1 + (Math.random() * 2 > 1 ? 1 : -1) * Math.random() * 5) % 108;
+	y1 = (y1 + (Math.random() * 2 > 1 ? 1 : -1) * Math.random() * 5) % 108;
 
-
-    x1 = (x1 + (Math.random() * 2 > 1 ? 1:-1) * Math.random() * 5) % 108;
-    y1 = (y1 + (Math.random() * 2  > 1 ? 1:-1) * Math.random() * 5) % 108;
-
-    console.log(listPolyline);
-    listPolyline.push([x1,y1]);
-    polyline = L.polyline([listPolyline], {
-        color: 'red'
-    }).bindPopup('I\'m a red polyline').addTo(mymap);
-    mymap.update;
-  }
+	console.log(listPolyline);
+	listPolyline.push([x1, y1]);
+	polyline = L.polyline([listPolyline], {
+		color: 'red',
+	})
+		.bindPopup("I'm a red polyline")
+		.addTo(mymap);
+	mymap.update;
+}
 // -----------------------------------
 var popup = L.popup();
 
 function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(mymap);
+	popup
+		.setLatLng(e.latlng)
+		.setContent('You clicked the map at ' + e.latlng.toString())
+		.openOn(mymap);
 }
 // -----------------------------------
 mymap.on('click', onMapClick);
 
 // -------------------------------------------------------------------------------------
 
-var xValues = [0,0,0,0,0,0,0,0,0,0];
-var xValues1 = [0,0,0,0,0,0,0,0,0,0];
-var xValues2 = [0,0,0,0,0,0,0,0,0,0];
-var xValues3 = [0,0,0,0,0,0,0,0,0,0];
-var xValues4 = [0,0,0,0,0,0,0,0,0,0];
-let myChart = new Chart("myChart", {
-    type: "line",
-    data: {
-        labels: xValues,
-        datasets: [{ 
-                data: xValues1,
-                borderColor: "red",
-                // fill: false
-                fill: true
-            },{ 
-                data: xValues2,
-                borderColor: "green",
-                fill: false
-            },{ 
-                data: xValues3,
-                borderColor: "blue",
-                fill: false
-            },{ 
-                data: xValues4,
-                borderColor: "orange",
-                fill: false
-            }
-        ]
-    },
-    options: {
-        legend: {display: false}
-    }
-});   
+var xValues = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var xValues1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var xValues2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var xValues3 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var xValues4 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let myChart = new Chart('myChart', {
+	type: 'line',
+	data: {
+		labels: xValues,
+		datasets: [
+			{
+				data: xValues1,
+				borderColor: 'red',
+				// fill: false
+				fill: true,
+			},
+			{
+				data: xValues2,
+				borderColor: 'green',
+				fill: false,
+			},
+			{
+				data: xValues3,
+				borderColor: 'blue',
+				fill: false,
+			},
+			{
+				data: xValues4,
+				borderColor: 'orange',
+				fill: false,
+			},
+		],
+	},
+	options: {
+		legend: { display: false },
+	},
+});
 
 let getStatut = (i1) => {
-    let total = 0;
-    for(let i=0;i<i1.length;i++){
-        total = i1[i];
-    }
-    total = total / i1.length;
-    if(total > 5){
-        return "Bất Ổn ~~~";
-    }
-    else{
-        return "Ổn Định ---";
-    }
-}
+	let total = 0;
+	for (let i = 0; i < i1.length; i++) {
+		total = i1[i];
+	}
+	total = total / i1.length;
+	if (total > 5) {
+		return 'Bất Ổn ~~~';
+	} else {
+		return 'Ổn Định ---';
+	}
+};
 
 functionRunning();
-function functionRunning(){
-    setTimeout(function(){functionRunning()}, 1000);
-    // alert("Hello");
-    const d = new Date();
-    let time = d.getTime();
-    // console.log(xValues);
-    xValues.push(time);
-    xValues1.push(Math.floor(Math.random() * 100));
-    xValues2.push(Math.floor(Math.random() * 100));
-    xValues3.push(Math.floor(Math.random() * 100));
-    xValues4.push(Math.floor(Math.random() * 100));
-    if(xValues.length > 10){
-        xValues.splice(0, 1);
-        xValues1.splice(0, 1);
-        xValues2.splice(0, 1);
-        xValues3.splice(0, 1);
-        xValues4.splice(0, 1);
-    }
-    document.getElementById("classExport").innerHTML = getStatut(xValues1);
-    document.getElementById("classExportVN").innerHTML = getStatut(xValues2);
-    document.getElementById("classExportTQ").innerHTML = getStatut(xValues3);
-    document.getElementById("classExportM").innerHTML = getStatut(xValues4);
+function functionRunning() {
+	setTimeout(function () {
+		functionRunning();
+	}, 1000);
+	// alert("Hello");
+	const d = new Date();
+	let time = d.getTime();
+	// console.log(xValues);
+	xValues.push(time);
+	xValues1.push(Math.floor(Math.random() * 100));
+	xValues2.push(Math.floor(Math.random() * 100));
+	xValues3.push(Math.floor(Math.random() * 100));
+	xValues4.push(Math.floor(Math.random() * 100));
+	if (xValues.length > 10) {
+		xValues.splice(0, 1);
+		xValues1.splice(0, 1);
+		xValues2.splice(0, 1);
+		xValues3.splice(0, 1);
+		xValues4.splice(0, 1);
+	}
+	document.getElementById('classExport').innerHTML = getStatut(xValues1);
+	document.getElementById('classExportVN').innerHTML = getStatut(xValues2);
+	document.getElementById('classExportTQ').innerHTML = getStatut(xValues3);
+	document.getElementById('classExportM').innerHTML = getStatut(xValues4);
 
-
-    document.getElementById("classCangThang").innerHTML = xValues1[xValues1.length - 1] + "%";
-    document.getElementById("classCangThangVN").innerHTML = xValues2[xValues2.length - 1] + "%";
-    document.getElementById("classCangThangTQ").innerHTML = xValues3[xValues3.length - 1] + "%";
-    document.getElementById("classCangThangM").innerHTML = xValues4[xValues4.length - 1] + "%";
-    myChart.update();
+	document.getElementById('classCangThang').innerHTML = xValues1[xValues1.length - 1] + '%';
+	document.getElementById('classCangThangVN').innerHTML = xValues2[xValues2.length - 1] + '%';
+	document.getElementById('classCangThangTQ').innerHTML = xValues3[xValues3.length - 1] + '%';
+	document.getElementById('classCangThangM').innerHTML = xValues4[xValues4.length - 1] + '%';
+	myChart.update();
 }
 
 // -------------------------------------------------------------------------------------
 
-var xValuesC = ["Italy", "France", "Spain", "USA"];
-var yValues = [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100), Math.floor(Math.random() * 100),Math.floor(Math.random() * 100)];
-var barColors = ["red", "green","blue","orange"];
+var xValuesC = ['Italy', 'France', 'Spain', 'USA'];
+var yValues = [
+	Math.floor(Math.random() * 100),
+	Math.floor(Math.random() * 100),
+	Math.floor(Math.random() * 100),
+	Math.floor(Math.random() * 100),
+];
+var barColors = ['red', 'green', 'blue', 'orange'];
 
-let myChart2 = new Chart("myChart2", {
-  type: "bar",
-  data: {
-    labels: xValuesC,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2021"
-    }
-  }
+let myChart2 = new Chart('myChart2', {
+	type: 'bar',
+	data: {
+		labels: xValuesC,
+		datasets: [
+			{
+				backgroundColor: barColors,
+				data: yValues,
+			},
+		],
+	},
+	options: {
+		legend: { display: false },
+		title: {
+			display: true,
+			text: 'World Wine Production 2021',
+		},
+	},
 });
 functionRunning2();
-function functionRunning2(){
-    setTimeout(function(){functionRunning2()}, 1000);
-    yValues.splice(0, 4);
-    yValues.push(xValues1[xValues1.length - 1]);
-    yValues.push(xValues2[xValues2.length - 1]);
-    yValues.push(xValues3[xValues3.length - 1]);
-    yValues.push(xValues4[xValues4.length - 1]);
-    myChart2.update();
-    // console.log("------------------");
+function functionRunning2() {
+	setTimeout(function () {
+		functionRunning2();
+	}, 1000);
+	yValues.splice(0, 4);
+	yValues.push(xValues1[xValues1.length - 1]);
+	yValues.push(xValues2[xValues2.length - 1]);
+	yValues.push(xValues3[xValues3.length - 1]);
+	yValues.push(xValues4[xValues4.length - 1]);
+	myChart2.update();
+	// console.log("------------------");
 }
 // -------------------------------------------------------------------------------------
 
 // Sending a receiving data in JSON format using GET method
-//      
+//
 
 let xhr = new XMLHttpRequest();
-let url = "url?data=" + encodeURIComponent(JSON.stringify({"email": "hey@mail.com", "password": "101010"}));
-xhr.open("GET", url, true);
-xhr.setRequestHeader("Content-Type", "application/json");
+let url = 'url?data=' + encodeURIComponent(JSON.stringify({ email: 'hey@mail.com', password: '101010' }));
+xhr.open('GET', url, true);
+xhr.setRequestHeader('Content-Type', 'application/json');
 xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        let json = JSON.parse(xhr.responseText);
-        console.log(json.email + ", " + json.password);
-    }
+	if (xhr.readyState === 4 && xhr.status === 200) {
+		let json = JSON.parse(xhr.responseText);
+		console.log(json.email + ', ' + json.password);
+	}
 };
 xhr.send();
 functionRunning4();
-function functionRunning4(){
-    setTimeout(function(){functionRunning4()}, 1000);
-    console.log("Ping2");
-
-
-
+function functionRunning4() {
+	setTimeout(function () {
+		functionRunning4();
+	}, 1000);
+	console.log('Ping2');
 }
-
 
 // -------------------------------------------------------------------------------------
 /*
@@ -382,3 +467,7 @@ function createDiv(height, width) {
 
 
 */
+
+let fbuttons = document.querySelectorAll('.fbutton');
+
+console.log(fbuttons);
